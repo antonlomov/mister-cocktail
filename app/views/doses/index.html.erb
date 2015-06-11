@@ -1,0 +1,20 @@
+<h1>Doses view</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Description</th>
+      <th>Cocktail</th>
+      <th>Ingredient</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @doses.each do |dose| %>
+      <%=render "dose", dose: dose %>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<p><%= link_to 'Create a New Dose', new_dose_path %></p>

@@ -1,0 +1,7 @@
+<tr  class="text-center">
+  <td><%= dose.id %></td>
+  <td><%= link_to dose.description, dose_path(dose) %></td>
+  <td ><%= dose.cocktail.name %></td>
+
+  <td><%= dose.ingredient.name %></td>
+</tr>
