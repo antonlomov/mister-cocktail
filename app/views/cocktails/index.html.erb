@@ -1,0 +1,16 @@
+<h1>Cocktails view</h1>
+
+<p><%= link_to 'Create a New Coctail', new_cocktail_path %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cocktails.each do |cocktail| %>
+      <%=render "cocktail", cocktail: cocktail %>
+    <% end %>
+  </tbody>
+</table>
