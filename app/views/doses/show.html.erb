@@ -4,4 +4,4 @@
 <p><%= @dose.cocktail.name %></p>
 <p><%= @dose.ingredient.name %></p>
 
-<p><%= link_to 'Go to Doses view', doses_path %></p>
+<p><%= link_to 'Go to Doses view', cocktail_doses_path(@dose.cocktail.id) %></p>

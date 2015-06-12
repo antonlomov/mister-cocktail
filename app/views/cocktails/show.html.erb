@@ -2,8 +2,11 @@
 
 <p><%= @cocktail.name %></p>
 <% @cocktail.doses.each do |dose| %>
-  <p><%= dose.description %>: <%= dose.ingredient.name %></p>
-  <p></p>
-
-<% end %>
+  <p><%= dose.description %>: <%= dose.ingredient.name %>
+    <%= link_to 'Delete', dose_path(dose), method: :delete %></p>
+  <% end %>
+<p><%= link_to 'Add dose', new_cocktail_dose_path(@cocktail.id) %></p>
 <p><%= link_to 'Return to Cocktails view', cocktails_path %></p>
+
+
+<!-- DELETE /cocktails/:cocktail_id/doses/:id(.:format)      doses#destroy -->
