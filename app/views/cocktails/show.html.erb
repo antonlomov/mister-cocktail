@@ -1,6 +1,7 @@
 <h1>Cocktail view</h1>
 
 <p><%= @cocktail.name %></p>
+<%= image_tag @cocktail.picture.url(:medium) %>
 <% @cocktail.doses.each do |dose| %>
   <p><%= dose.description %>: <%= dose.ingredient.name %>
     <%= link_to 'Delete', dose_path(dose), method: :delete %></p>

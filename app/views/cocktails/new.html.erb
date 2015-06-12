@@ -1,8 +1,12 @@
 <h1>New cocktail</h1>
 
-<%= simple_form_for(@cocktail) do |f| %>
+<%= simple_form_for(@cocktail, html: { multipart: true }) do |f| %>
 <%= f.error_notification %>
 <%= f.input :name %>
+<p>
+  <%= f.label :picture %>
+  <%= f.file_field :picture %>
+</p>
 <%= f.button :submit %>
 
 <% end %>
